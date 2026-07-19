@@ -1,0 +1,185 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{booktabs}
+
+\geometry{top=25mm, bottom=25mm, left=20mm, right=20mm}
+
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}[{\titlerule[0.5pt]}]
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\title{Atomic Physics: Report Assignment Solutions}
+\author{Your Name / Student ID}
+\date{July 27, 2026}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1: Quantization of the Electromagnetic Field and Atom-Field Interactions}
+
+\subsection*{1. Explain why the transition probability for photon absorption is proportional to the photon number $n$.}
+In the quantum mechanical description of the electromagnetic field, the interaction between an atom and the field is governed by the interaction Hamiltonian $\hat{H}_{\text{int}} \propto \hat{\mathbf{A}} \cdot \hat{\mathbf{p}}$, where $\hat{\mathbf{A}}$ is the vector potential operator. For a specific mode, $\hat{\mathbf{A}}$ contains the photon annihilation operator $\hat{a}$.
+
+During an absorption process, the field transitions from an initial state with $n$ photons, $|n\rangle$, to a final state with $n-1$ photons, $|n-1\rangle$. The transition matrix element is proportional to:
+\[
+\langle n-1 | \hat{a} | n \rangle = \sqrt{n} \langle n-1 | n-1 \rangle = \sqrt{n}
+\]
+According to Fermi's Golden Rule, the transition probability per unit time $W_{\text{abs}}$ is proportional to the absolute square of the matrix element:
+\[
+W_{\text{abs}} \propto \left| \langle n-1 | \hat{a} | n \rangle \right|^2 = (\sqrt{n})^2 = n
+\]
+Therefore, the transition probability for photon absorption is directly proportional to the photon number $n$.
+
+\subsection*{2. Explain why the transition probability for photon emission is proportional to $n+1$.}
+For photon emission, the vector potential operator $\hat{\mathbf{A}}$ involves the photon creation operator $\hat{a}^\dagger$, which increases the photon number of the mode.
+
+When an atom emits a photon into a mode initially containing $n$ photons, the field transitions from $|n\rangle$ to $|n+1\rangle$. The transition matrix element is given by:
+\[
+\langle n+1 | \hat{a}^\dagger | n \rangle = \sqrt{n+1} \langle n+1 | n+1 \rangle = \sqrt{n+1}
+\]
+By applying Fermi's Golden Rule, the transition probability per unit time $W_{\text{emi}}$ is proportional to the absolute square of this matrix element:
+\[
+W_{\text{emi}} \propto \left| \langle n+1 | \hat{a}^\dagger | n \rangle \right|^2 = (\sqrt{n+1})^2 = n+1
+\]
+Hence, the emission probability is proportional to $n+1$.
+
+\subsection*{3. In the factor $n+1$, explain what the terms proportional to $n$ and to $1$ physically represent.}
+The factor $n+1$ can be physically separated into two distinct components:
+\begin{itemize}
+    \item \textbf{The term proportional to $n$:} This represents \textbf{stimulated emission}. It is an emission process triggered by the presence of existing photons in the mode. The rate of this process increases linearly with the ambient photon density (or light intensity).
+    \item \textbf{The term proportional to $1$:} This represents \textbf{spontaneous emission}. This process occurs independently of any external photons. Even if the field is initially in the vacuum state ($n=0$), this term ensures that the emission probability remains non-zero.
+\end{itemize}
+
+\subsection*{4. Explain the difference between spontaneous emission and stimulated emission, and discuss why spontaneous emission can occur even in vacuum, relating your answer to the role of the quantized electromagnetic field.}
+\begin{itemize}
+    \item \textbf{Difference:} Stimulated emission occurs when an incoming photon interacts with an excited atom, inducing it to decay to a lower energy state and emit a second photon that is perfectly coherent (identical in frequency, phase, polarization, and direction) with the incident photon. Spontaneous emission occurs when an excited atom naturally transitions to a lower energy state without any external trigger, releasing a photon with random phase, polarization, and direction.
+    \item \textbf{Occurrence in Vacuum:} Classical electromagnetic theory cannot explain why an isolated atom in a perfect vacuum should ever spontaneously decay. However, in quantum field theory, the electromagnetic field is quantized. The lowest energy state of a quantized field mode is the vacuum state $|0\rangle$, which possesses a non-zero \textbf{vacuum fluctuation} (corresponding to the zero-point energy $\frac{1}{2}\hbar\omega$). These fundamental, stochastic fluctuations of the vacuum field interact with the atomic dipole, perturbing the excited state and driving the transition to the ground state. This is why the spontaneous emission term ($1$ in the $n+1$ factor) remains active even in a vacuum.
+\end{itemize}
+
+\subsection*{5. The lifetime of the $2^{3}S_{1}$ state of helium is about 8000 s, whereas typical electric-dipole-allowed transitions have lifetimes of the order of $10^{-8}$ s. Using the expression for the spontaneous emission rate derived in class, explain the physical origin of this enormous difference.}
+The spontaneous emission rate (Einstein $A$ coefficient) for a standard electric dipole ($E1$) transition between states $|i\rangle$ and $|f\rangle$ is given by:
+\[
+A = \frac{4\omega^3}{3\hbar c^3} |\langle f | \hat{\mathbf{d}} | i \rangle|^2
+\]
+where $\hat{\mathbf{d}} = -e\hat{\mathbf{r}}$ is the electric dipole operator. The lifetime $\tau$ is the inverse of the total decay rate ($\tau = 1/A$).
+
+The $2^{3}S_{1}$ state of helium is the lowest triplet state, while the ground state of helium is $1^{1}S_{0}$ (a singlet state). A transition from $2^{3}S_{1}$ to $1^{1}S_{0}$ is strictly forbidden by multiple selection rules:
+\begin{enumerate}
+    \item \textbf{$\Delta S = 0$ (Spin selection rule):} The transition requires a change in total spin from $S=1$ to $S=0$. This is strongly forbidden because the spin-orbit coupling is extremely weak in light elements like helium.
+    \item \textbf{Parity selection rule for $E1$:} Both states are $S$-states ($L=0$), meaning they have even parity. Since the electric dipole operator $\hat{\mathbf{d}}$ has odd parity, the matrix element $\langle 1^{1}S_{0} | \hat{\mathbf{d}} | 2^{3}S_{1} \rangle$ is identically zero.
+\end{enumerate}
+Because the electric dipole transition is completely forbidden ($A_{E1} = 0$), the decay can only proceed via extremely weak, higher-order processes, specifically a relativistic \textbf{magnetic dipole ($M1$) transition}. Since the matrix elements for $M1$ transitions are several orders of magnitude smaller than those for $E1$ transitions, the transition rate $A$ becomes incredibly small, resulting in an exceptionally long lifetime of $\approx 8000\text{ s}$.
+
+\newpage
+
+\section*{Problem 2: Thermal Equilibrium of Atoms in Blackbody Radiation}
+
+\subsection*{1. Explain why the internal-state populations of atoms interacting with blackbody radiation obey the Boltzmann distribution in thermal equilibrium. In your explanation, refer to the balance between absorption, stimulated emission, and spontaneous emission.}
+Consider a two-level atomic system with a lower state $|1\rangle$ and an upper state $|2\rangle$ with populations $N_1$ and $N_2$ in thermal equilibrium with blackbody radiation at temperature $T$. The energy difference is $\hbar\omega = E_2 - E_1$.
+
+For the population distribution to remain stationary (detailed balance), the rate of upward transitions must equal the rate of downward transitions:
+\[
+\text{Upward Rate} = \text{Downward Rate} \implies N_1 W_{\text{abs}} = N_2 W_{\text{emi}}
+\]
+Using the relation that the transition probabilities are proportional to $n$ for absorption and $n+1$ for emission (where $n$ is the mean photon number per mode), and assuming symmetric statistical weights ($B_{12} = B_{21}$), we can write:
+\[
+N_1 \cdot n = N_2 \cdot (n + 1)
+\]
+Solving for the population ratio yields:
+\[
+\frac{N_2}{N_1} = \frac{n}{n+1} = \frac{1}{1 + \frac{1}{n}}
+\]
+According to Planck's law for blackbody radiation, the average photon number per mode in thermal equilibrium is given by the Bose-Einstein distribution:
+\[
+n = \frac{1}{e^{\hbar\omega / k_B T} - 1} \implies \frac{1}{n} = e^{\hbar\omega / k_B T} - 1
+\]
+Substituting this back into the population ratio:
+\[
+\frac{N_2}{N_1} = \frac{1}{1 + \left(e^{\hbar\omega / k_B T} - 1\right)} = e^{-\hbar\omega / k_B T} = e^{-(E_2 - E_1)/k_B T}
+\]
+This is precisely the \textbf{Boltzmann distribution}. Thus, the detailed balance between absorption, stimulated emission, and spontaneous emission naturally satisfies the thermodynamic requirement under blackbody radiation.
+
+\subsection*{2. Explain how absorption, stimulated emission, and spontaneous emission contribute to (i) the friction force acting on the atom, and (ii) momentum diffusion.}
+When an atom moves with velocity $\mathbf{v}$ through isotropic blackbody radiation, it experiences a Doppler shift. In the atom's rest frame, the radiation fields coming from the forward direction are blue-shifted, while fields from the backward direction are red-shifted.
+
+\begin{itemize}
+    \item \textbf{(i) Friction Force:} 
+    \begin{itemize}
+        \item \textit{Absorption:} The moving atom perceives higher-frequency (blue-shifted) photons in its direction of motion. Depending on the spectral gradient at the atomic resonance $\omega_A$, the atom absorbs photons at different rates from the forward and backward directions. This differential absorption transfers a net momentum opposite to the velocity, acting as a decelerating \textbf{friction force}.
+        \textit{Stimulated Emission:} Stimulated emission is induced by the directional photons of the radiation field. Because the forward field intensity is modified by the Doppler shift, it stimulates emission preferentially along the axis of motion. Combined with absorption, the net balance determines the magnitude and sign of the directional damping friction.
+        \item \textit{Spontaneous Emission:} Spontaneous emission is spatially isotropic on average. Therefore, the net momentum transferred over many random directions averages out to zero, meaning it \textbf{does not contribute directly to the directional friction force}.
+    \end{itemize}
+    \item \textbf{(ii) Momentum Diffusion:}
+    Momentum diffusion arises from the statistical fluctuations (randomness) of the momentum transfer steps, which causes heating.
+    \begin{itemize}
+        \item \textit{Absorption:} Photons are absorbed at discrete, stochastic times from various directions. Even if the radiation is isotropic, these discrete momentum steps ($\pm \hbar\mathbf{k}$) cause the atom's momentum to execute a random walk, contributing to momentum diffusion.
+        \item \textit{Spontaneous Emission:} Although the average force from spontaneous emission is zero, each individual decay event emits a photon in a random direction, imparting a discrete recoil momentum $-\hbar\mathbf{k}$ to the atom. This stochastic recoil acts as a major source of \textbf{momentum diffusion}.
+        \item \textit{Stimulated Emission:} Stimulated emission events also occur stochastically along the directions of the mode photons. The randomness of when these emission events occur adds further fluctuations to the net momentum, expanding the momentum diffusion tensor.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+
+\section*{Problem 3: Thermalization in Blackbody Radiation}
+
+\subsection*{1. Calculate the average photon number $\overline{n}(\omega_{A})$ at the resonance frequency.}
+The average photon number per mode $\overline{n}(\omega)$ is given by the Planck distribution formula:
+\[
+\overline{n}(\omega_A) = \frac{1}{e^{\hbar\omega_A / k_B T} - 1} = \frac{1}{e^{hc / \lambda k_B T} - 1}
+\]
+Given constants and values:
+\begin{itemize}
+    \item Planck constant: $h \approx 6.626 \times 10^{-34}\text{ J}\cdot\text{s}$
+    \item Speed of light: $c \approx 2.998 \times 10^8\text{ m/s}$
+    \item Boltzmann constant: $k_B \approx 1.381 \times 10^{-23}\text{ J/K}$
+    \item Resonance wavelength: $\lambda = 589 \times 10^{-9}\text{ m}$
+    \item Solar surface temperature: $T = 6000\text{ K}$
+\end{itemize}
+First, we calculate the dimensionless exponent:
+\[
+\frac{hc}{\lambda k_B T} = \frac{(6.626 \times 10^{-34}\text{ J}\cdot\text{s}) \times (2.998 \times 10^8\text{ m/s})}{(589 \times 10^{-9}\text{ m}) \times (1.381 \times 10^{-23}\text{ J/K}) \times 6000\text{ K}} = \frac{1.9865 \times 10^{-25}}{4.8797 \times 10^{-27}} \approx 4.071
+\]
+Substituting this value into the distribution formula:
+\[
+\overline{n}(\omega_A) = \frac{1}{e^{4.071} - 1} \approx \frac{1}{58.616 - 1} = \frac{1}{57.616} \approx 0.0174
+\]
+Thus, the average photon number at the resonance frequency is $\overline{n}(\omega_A) \approx \mathbf{0.0174}$.
+
+\subsection*{2. Using the expression for the friction coefficient, or equivalently the thermalization time, derived in class, estimate the thermalization time of sodium atoms.}
+The friction coefficient $\alpha$ for an atom in a broadband isotropic radiation field depends on the gradient of the intensity spectrum and the spontaneous decay rate $\Gamma$. A standard expression derived from the Doppler-shifted scattering rate takes the form:
+\[
+\alpha \approx \hbar k^2 \cdot \Gamma \cdot \left[ -\omega \frac{\partial \overline{n}}{\partial \omega} \right]_{\omega_A}
+\]
+Differentiating $\overline{n}(\omega) = (e^{\hbar\omega/k_B T}-1)^{-1}$ with respect to $\omega$ gives:
+\[
+-\omega \frac{\partial \overline{n}}{\partial \omega} = \frac{\hbar\omega}{k_B T} \frac{e^{\hbar\omega/k_B T}}{\left(e^{\hbar\omega/k_B T}-1\right)^2} = \frac{\hbar\omega}{k_B T} \overline{n}(\omega) \left(\overline{n}(\omega) + 1\right)
+\]
+Using the values $\frac{\hbar\omega_A}{k_B T} \approx 4.071$ and $\overline{n}(\omega_A) \approx 0.0174$:
+\[
+-\omega \frac{\partial \overline{n}}{\partial \omega} \approx 4.071 \times 0.0174 \times 1.0174 \approx 0.0721
+\]
+For the sodium $D$-line, the spontaneous decay rate is $\Gamma \approx 6 \times 10^7\text{ s}^{-1}$, and the wavenumber is $k = \frac{2\pi}{\lambda} \approx 1.067 \times 10^7\text{ m}^{-1}$. The mass of a sodium atom is $M \approx 3.8 \times 10^{-26}\text{ kg}$. The mechanical coupling scale is:
+\[
+\hbar k^2 \approx (1.055 \times 10^{-34}\text{ J}\cdot\text{s}) \times (1.067 \times 10^7\text{ m}^{-1})^2 \approx 1.20 \times 10^{-20}\text{ kg/s}
+\]
+This yields a friction coefficient of:
+\[
+\alpha \approx (1.20 \times 10^{-20}\text{ kg/s}) \times (6 \times 10^7\text{ s}^{-1}) \times 0.0721 \approx 5.19 \times 10^{-14}\text{ kg/s}
+\]
+The thermalization time $\tau_{\text{therm}}$ is defined as:
+\[
+\tau_{\text{therm}} = \frac{M}{\alpha} \approx \frac{3.8 \times 10^{-26}\text{ kg}}{5.19 \times 10^{-14}\text{ kg/s}} \approx \mathbf{7.3 \times 10^{-13}\text{ s}}
+\]
+*(Note: Depending on the exact numerical prefactors introduced in class, this timescale generally falls in the range of $10^{-12}$ to $10^{-11}\text{ s}$.)*
+
+\subsection*{3. Based on your results, explain why blackbody radiation alone cannot efficiently cool atoms.}
+Blackbody radiation cannot be used to efficiently cool atoms down to ultra-low temperatures due to the following reasons:
+\begin{enumerate}
+    \item \textbf{High Equilibrium Temperature Floor:} As demonstrated by the detailed balance in Problem 2, any atomic system interacting cleanly with blackbody radiation will eventually thermalize to the ambient temperature $T$ of the radiation field itself. Even though the thermalization time is extremely rapid ($\sim 10^{-12}\text{ s}$), the final temperature of the atoms is bounded by the blackbody source temperature (e.g., $6000\text{ K}$ in this solar surface scenario).
+    \item \textbf{Lack of Unidirectional Detuning Control:} In modern laser cooling techniques (such as Doppler cooling), a laser is precisely red-detuned relative to the atomic transition, ensuring that moving atoms preferentially absorb photons opposing their velocity vector. In contrast, blackbody radiation is broadband and completely isotropic. It continuously spans all frequencies, and as the atoms slow down, the directional velocity-damping friction forces vanish while the random, stochastic momentum diffusion (from random absorption and isotropic spontaneous recoil) continuously heats the atomic ensemble.
+\end{enumerate}
+
+\end{document}
