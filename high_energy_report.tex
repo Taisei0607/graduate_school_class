@@ -1,0 +1,138 @@
+\documentclass[autodetect-engine,11pt,a4paper]{bxjsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=20mm}
+
+\title{\Large\textbf{2026年度 高エネルギー物理学 期末レポート解答}}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{第1問：弱い相互作用のファインマン図}
+以下の弱い相互作用による過程の最低次（クォークレベル）ファインマン図を示す。
+
+\subsection*{(1) $\nu_e + n \rightarrow e^- + p$}
+$W^+$ ボソンの交換による電荷カレント（CC）過程である。中性子 $n(udd)$ 内の $d$ クォークが $W^-$ ボソンを放出して $u$ クォークへ変化し（陽子 $p(uud)$ となる）、$W^-$ が $\nu_e$ に吸収されて $e^-$ になる（あるいは $W^+$ の交換として記述される）。
+
+\vspace{5cm} % 手書き・図貼り付け用のスペース
+
+\subsection*{(2) $\pi^+ \rightarrow \mu^+ + \nu_\mu$}
+荷電パイ中間子 $\pi^+(u\bar{d})$ の純レプトン崩壊である。$u$ クォークと $\bar{d}$ 反クォークが対消滅して $W^+$ ボソンを生成し、その $W^+$ が $\mu^+$ と $\nu_\mu$ に崩壊する。
+
+\vspace{5cm} % 手書き・図貼り付け用のスペース
+
+\subsection*{(3) $K^0 \rightarrow \pi^+ + \pi^-$}
+ストレンジネスの変化を伴う弱崩壊（$\Delta S = 1$）である。$K^0(d\bar{s})$ 中の $\bar{s}$ 反クォークが $W^+$ を放出して $\bar{u}$ 反クォークに変化し、$W^+$ が $u\bar{d}$ ペアに崩壊する。残った $d$ クォークは観測線としてそのまま残り、それぞれ $\pi^+(u\bar{d})$ と $\pi^-(d\bar{u})$ を形成する。
+
+\vspace{5cm} % 手書き・図貼り付け用のスペース
+
+\newpage
+
+\section*{第2問：強い相互作用のクォークフロー図}
+以下の強い相互作用による反応または崩壊のクォークフロー図を示す。
+
+\subsection*{(1) $p + \pi^- \rightarrow n + \pi^0$}
+$p(uud)$ と $\pi^-(d\bar{u})$ の反応により、$n(udd)$ と $\pi^0\left(\frac{u\bar{u}-d\bar{d}}{\sqrt{2}}\right)$ が生成される。$p$ の $u$ と $\pi^-$ の $\bar{u}$ が消滅し、グルーオンを介して $d\bar{d}$ ペア（あるいは $u\bar{u}$ ペア）が再結合する。
+
+\vspace{5cm} % 手書き・図貼り付け用のスペース
+
+\subsection*{(2) $p + K^- \rightarrow K^+ + \Xi^-$}
+$p(uud)$ と $K^-(s\bar{u})$ の反応である。強い相互作用によりグルーオンから $s\bar{s}$ ペアが生成され、$K^-(s\bar{u})$ の $s$ クォークとともに $\Xi^-(dss)$ および $K^+(u\bar{s})$ が形成される。
+
+\vspace{5cm} % 手書き・図貼り付け用のスペース
+
+\subsection*{(3) $\Delta^{++} \rightarrow p + \pi^+$}
+$\Delta^{++}(uuu)$ の強い崩壊である。グルーオン放射を介して $d\bar{d}$ ペアが生成され、$uuu$ のうち $uu$ と生成された $d$ が結合して $p(uud)$ に、$u$ と $\bar{d}$ が結合して $\pi^+(u\bar{d})$ になる。
+
+\vspace{5cm} % 手書き・図貼り付け用のスペース
+
+\newpage
+
+\section*{第3問：アイソスピン保存則と断面積の比}
+
+各粒子のアイソスピン状態は以下の通りである。
+\begin{align*}
+    \text{パイ中間子 } (I=1): \quad & |\pi^+\rangle = |1, 1\rangle, \quad |\pi^0\rangle = |1, 0\rangle, \quad |\pi^-\rangle = |1, -1\rangle \\
+    \text{核子 } (I=1/2): \quad & |p\rangle = |1/2, 1/2\rangle, \quad |n\rangle = |1/2, -1/2\rangle \\
+    \text{K中間子 } (I=1/2): \quad & |K^+\rangle = |1/2, 1/2\rangle, \quad |K^0\rangle = |1/2, -1/2\rangle \\
+    \text{シグマバリオ } (I=1): \quad & |\Sigma^+\rangle = |1, 1\rangle, \quad |\Sigma^0\rangle = |1, 0\rangle, \quad |\Sigma^-\rangle = |1, -1\rangle
+\end{align*}
+
+Clebsch-Gordan 係数を用いて、始状態および終状態を全アイソスピン状態 $|I, I_3\rangle$ に分解する。
+
+\subsection*{始状態の分解}
+\begin{align*}
+    |\pi^- p\rangle &= |1, -1\rangle \otimes |1/2, 1/2\rangle = \sqrt{\frac{1}{3}}|3/2, -1/2\rangle - \sqrt{\frac{2}{3}}|1/2, -1/2\rangle \\
+    |\pi^+ p\rangle &= |1, 1\rangle \otimes |1/2, 1/2\rangle = |3/2, 3/2\rangle
+\end{align*}
+
+\subsection*{終状態の分解}
+\begin{align*}
+    |K^0 \Sigma^0\rangle &= |1/2, -1/2\rangle \otimes |1, 0\rangle = \sqrt{\frac{2}{3}}|3/2, -1/2\rangle + \sqrt{\frac{1}{3}}|1/2, -1/2\rangle \\
+    |K^+ \Sigma^-\rangle &= |1/2, 1/2\rangle \otimes |1, -1\rangle = \sqrt{\frac{1}{3}}|3/2, -1/2\rangle - \sqrt{\frac{2}{3}}|1/2, -1/2\rangle \\
+    |K^+ \Sigma^+\rangle &= |1/2, 1/2\rangle \otimes |1, 1\rangle = |3/2, 3/2\rangle
+\end{align*}
+
+\subsection*{遷移振幅の計算}
+アイソスピン保存により、各反応の行列要素 $M^{(i)}$ は $I=3/2, 1/2$ の振幅 $M_3, M_1$ を用いて表される。
+\begin{align*}
+    M^{(1)} &= \langle K^0 \Sigma^0 | \mathcal{M} | \pi^- p \rangle = \sqrt{\frac{2}{3}}\sqrt{\frac{1}{3}}M_3 - \sqrt{\frac{1}{3}}\sqrt{\frac{2}{3}}M_1 = \frac{\sqrt{2}}{3}(M_3 - M_1) \\
+    M^{(2)} &= \langle K^+ \Sigma^- | \mathcal{M} | \pi^- p \rangle = \sqrt{\frac{1}{3}}\sqrt{\frac{1}{3}}M_3 + \left(-\sqrt{\frac{2}{3}}\right)\left(-\sqrt{\frac{2}{3}}\right)M_1 = \frac{1}{3}M_3 + \frac{2}{3}M_1 \\
+    M^{(3)} &= \langle K^+ \Sigma^+ | \mathcal{M} | \pi^+ p \rangle = M_3
+\end{align*}
+
+\subsection*{断面積の比}
+断面積は $\sigma \propto |M|^2$ より、求める比は以下のようになる。
+\[
+\sigma(\pi^- p \rightarrow K^0 \Sigma^0) : \sigma(\pi^- p \rightarrow K^+ \Sigma^-) : \sigma(\pi^+ p \rightarrow K^+ \Sigma^+) = \frac{2}{9}|M_3 - M_1|^2 : \frac{1}{9}|M_3 + 2M_1|^2 : |M_3|^2
+\]
+
+\newpage
+
+\section*{第4問：相対論的運動学とローレンツ変換}
+
+\subsection*{1. 重心系 $S'$ における 4 元運動量}
+$\pi^0$ 中間子の静止系（重心系 $S'$）において、$\pi^0$ の質量を $m$ とする。崩壊により生じる2つの光子 $\gamma_1, \gamma_2$ は等しいエネルギー $E' = m/2$ を持ち、進行方向（$x'$ 軸）に対して垂直（$y'$ 軸方向）に放出されたため、4元運動量は次のように表される。
+\[
+p_{\gamma 1}^{\prime \mu} = \left( \frac{m}{2}, 0, \frac{m}{2}, 0 \right), \quad p_{\gamma 2}^{\prime \mu} = \left( \frac{m}{2}, 0, -\frac{m}{2}, 0 \right)
+\]
+
+\subsection*{2. ローレンツ変換による実験室系 $S$ への変換}
+$\pi^0$ が実験室系 $S$ で $x$ 軸方向に運動量 $p = 1.0\text{ GeV/c}$ で運動しているとする。ローレンツ因子は
+\[
+E = \sqrt{p^2 + m^2}, \quad \gamma = \frac{E}{m}, \quad \beta = \frac{p}{E}
+\]
+である。$x$ 軸方向のローレンツ変換式
+\[
+E_i = \gamma (E'_i + \beta p'_{xi}), \quad p_{xi} = \gamma (p'_{xi} + \beta E'_i), \quad p_{yi} = p'_{yi}
+\]
+を適用すると、光子1の実験室系での運動量は
+\[
+E_1 = \gamma \frac{m}{2} = \frac{E}{2}, \quad p_{x1} = \gamma \beta \frac{m}{2} = \frac{p}{2}, \quad p_{y1} = \frac{m}{2}
+\]
+となる。
+
+\subsection*{3. 2光子の放出角度 $\theta$}
+光子1が $x$ 軸（元の $\pi^0$ の進行方向）となす角を $\theta/2$ とすると、
+\[
+\tan\left(\frac{\theta}{2}\right) = \frac{p_{y1}}{p_{x1}} = \frac{m/2}{p/2} = \frac{m}{p}
+\]
+したがって、2つの光子の運動方向がなす角度 $\theta$ は
+\[
+\theta = 2 \arctan\left(\frac{m}{p}\right)
+\]
+となる。
+
+$\pi^0$ の質量 $m \approx 0.135\text{ GeV/c}^2$ および $p = 1.0\text{ GeV/c}$ を代入すると、
+\[
+\frac{m}{p} = 0.135 \implies \frac{\theta}{2} = \arctan(0.135) \approx 0.1342\text{ rad} \quad (7.69^\circ)
+\]
+\[
+\theta \approx 0.268\text{ rad} \quad (15.4^\circ)
+\]
+したがって、実験室系で見た2つの光子の運動方向がなす角度は \textbf{約 $15.4^\circ$} ($0.268\text{ rad}$) である。
+
+\end{document}
