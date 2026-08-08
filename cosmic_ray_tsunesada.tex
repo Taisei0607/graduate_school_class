@@ -1,0 +1,98 @@
+\documentclass[a4paper,11pt]{jsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,top=25mm,bottom=25mm}
+
+\title{宇宙線物理学A レポート課題}
+\author{BHB26052 河村太星}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{課題1}
+
+\subsection*{空気シャワー現象について}
+高エネルギーの宇宙線(陽子や原子核、ガンマ線など)が大気の上層(高度約10$\sim$20km)に突入すると、大気中の窒素や酸素の原子核と非弾性衝突を起こし、数多くの二次粒子(パイ中間子、K中間子など)を生成する。生成された荷電パイ中間子などの崩壊によって高エネルギーのガンマ線やミューオンが生まれ、中性パイ中間子は即座に2個のガンマ線に崩壊する。
+このガンマ線は電子・陽電子対生成を引き起こし、生成された電子・陽子はさらに制動放射によって新たなガンマ線を放出する。この過程が繰り返されることで、1個の一次宇宙線から指数関数的に多数の粒子(電子、陽電子、光子)が増殖する連鎖反応が発生する。これが「空気シャワー」と呼ばれる現象である。
+空気シャワーは、大気中を進むにつれて粒子数が急増してピークに達し、その後は大気によるエネルギーの吸収(電離損失など)が粒子の増殖を上回るため、最終的に地表や地下に達する頃には数百万から数十億個もの粒子からなる「シャワーディスク」として観測される。地表に展開された検出器アレイや大気チェレンコフ望遠鏡を用いることで、一次宇宙線のエネルギーや到来方向を再構築することができる。
+
+\subsection*{宇宙線の組成について}
+宇宙線は、宇宙空間を光速に近い超高エネルギーで飛び交う荷電粒子であり、その化学組成は地球や太陽系周辺の元素存在度と密接な関係を持つ。
+宇宙線全体の約90\%がプロトン(陽子)、約9\%がアルファ粒子(ヘリウム原子核)、残りの約1\%が重元素(炭素、酸素、鉄などの原子核)および電子・陽電子である。太陽系の元素組成と比較すると、宇宙線においては水素やヘリウムに対するリチウム、ベリリウム、ホウ素(Li, Be, B)などの軽元素や、スカンジウムからマンガンに至る鉄より軽い亜鉄元素の存在比が著しく高いという特徴がある。
+これは「破砕反応」に起因する。すなわち、銀河系内を伝播する過程で、炭素や酸素、鉄といった一次宇宙線(天体で加速された粒子)が星間物質の水素やヘリウム原子核と衝突し、原子核が砕けることで二次的な軽元素や亜鉄元素(二次宇宙線)が生成されるためである。この組成を分析することで、宇宙線が銀河系内を移動してきた総物質量や伝播の歴史を推定することができる。
+
+\section*{課題2}
+
+\subsection*{(1)}
+宇宙線陽子(電荷$q = e$、質量$m$、速度$v$)が一様な磁場$B$の中で受けるローレンツ力と円運動の向心力が釣り合う条件から、ラーモア半径$r_L$は次のように表される。
+\begin{equation}
+    e v B = \frac{m v^2}{r_L} \quad \Longrightarrow \quad r_L = \frac{p}{e B}
+\end{equation}
+ここで、$p = m v$は粒子の運動量である。極超相対論的領域($E \gg m c^2$)では$p \approx E/c$と近似できるため、
+\begin{equation}
+    r_L \approx \frac{E}{e c B}
+\end{equation}
+となる。ここで、一般のエネルギーに対しては、$p = \frac{\sqrt{E(E + 2mc^2)}}{c}$を代入した式が用いられる。
+
+\subsection*{(2)}
+エネルギー$E = 10^{20}\text{ eV}$の宇宙線陽子が、銀河系外磁場$B = 1\text{ nG}$の中を運動する場合について、光との到着時間差$\Delta t$を導出する。
+極超相対論的な領域では、粒子のエネルギー$E$と運動量$p$の間には$E \approx c p$の関係が成り立つ。したがって、式(2)よりラーモア半径$r_L$は以下のように計算される。
+\begin{align}
+    r_L = \frac{E}{e c B} = \frac{10^{20}\text{ eV}}{(1.602 \times 10^{-19}\text{ C}) \times (2.998 \times 10^8\text{ m/s}) \times (10^{-9} \times 10^{-4}\text{ T})}
+\end{align}
+ここで、エネルギーをジュール(J)に換算する($1\text{ eV} = 1.602 \times 10^{-19}\text{ J}$)。
+\begin{align}
+    E &= 10^{20}\text{ eV} = 10^{20} \times 1.602 \times 10^{-19}\text{ J} = 16.02\text{ J} \\
+    e c B &= (1.602 \times 10^{-19}\text{ C}) \times (2.998 \times 10^8\text{ m/s}) \times (10^{-13}\text{ T}) = 4.802 \times 10^{-24}\text{ N}
+\end{align}
+これより、メートル単位でのラーモア半径は、
+\begin{equation}
+    r_L = \frac{16.02\text{ J}}{4.802 \times 10^{-24}\text{ N}} \approx 3.336 \times 10^{24}\text{ m}
+\end{equation}
+となる。これをパーセック($1\text{ Mpc} = 3.086 \times 10^{22}\text{ m}$)に換算すると、
+\begin{equation}
+    r_L = \frac{3.336 \times 10^{24}\text{ m}}{3.086 \times 10^{22}\text{ m/Mpc}} \approx 108.1\text{ Mpc}
+\end{equation}
+が得られる。天体から地球までの直線距離(光の経路長)を$D = 1\text{ Mpc}$とする。宇宙線は半径$r_L$の円弧に沿って進むため、弦の長さ$D$と円弧の長さ$L$、および中心角$\theta$の間には以下の関係が成り立つ。
+\begin{equation}
+    D = 2 r_L \sin\left(\frac{\theta}{2}\right)
+\end{equation}
+ここで、$D \ll r_L$であるため、中心角$\theta$は非常に小さく($\theta \ll 1$)、テイラー展開$\sin x \approx x - \frac{x^3}{6}$を用いることができる。
+\begin{equation}
+    D = 2 r_L \left[ \frac{\theta}{2} - \frac{1}{6}\left(\frac{\theta}{2}\right)^3 + \mathcal{O}(\theta^5) \right] = r_L \theta \left( 1 - \frac{\theta^2}{24} \right)
+\end{equation}
+一方、宇宙線の進む円弧の長さ$L$は$L = r_L \theta$で表される。
+式(9)より$\theta \approx \frac{D}{r_L} + \frac{D^3}{24 r_L^3}$であるため、これを代入すると、
+\begin{equation}
+    L = r_L \left( \frac{D}{r_L} + \frac{D^3}{24 r_L^3} \right) = D + \frac{D^3}{24 r_L^2} = D \left( 1 + \frac{D^2}{24 r_L^2} \right)
+\end{equation}
+$\theta \approx \frac{D}{r_L}$を代入すると、軌道のまわり道による長さの差$\Delta L = L - D$は次式で近似できる。
+\begin{equation}
+    \Delta L = L - D \approx \frac{D^3}{24 r_L^2}
+\end{equation}
+与えられた値$D = 1\text{ Mpc}$および$r_L \approx 108.1\text{ Mpc}$を式(11)に代入する。
+\begin{align}
+    \Delta L &\approx \frac{(1\text{ Mpc})^3}{24 \times (108.1\text{ Mpc})^2} \\
+        &= \frac{1}{24 \times 11685.6}\text{ Mpc} \\
+        &\approx 3.568 \times 10^{-6}\text{ Mpc}
+\end{align}
+これをメートル単位に換算すると、
+\begin{equation}
+    \Delta L = 3.568 \times 10^{-6}\text{ Mpc} \times (3.086 \times 10^{22}\text{ m/Mpc}) \approx 1.101 \times 10^{17}\text{ m}
+\end{equation}
+宇宙線も光もほぼ光速$c \approx 2.998 \times 10^8\text{ m/s}$で伝播すると仮定すると、到着の時間差$\Delta t$は以下のように求まる。
+\begin{align}
+    \Delta t &= \frac{\Delta L}{c} \\
+        &= \frac{1.101 \times 10^{17}\text{ m}}{2.998 \times 10^8\text{ m/s}} \\
+        &\approx 3.673 \times 10^8\text{ 秒}
+\end{align}
+これを年単位に換算する($1\text{年} = 365.25 \times 24 \times 3600 \approx 3.156 \times 10^7\text{ 秒}$)。
+\begin{equation}
+    \Delta t = \frac{3.673 \times 10^8\text{ s}}{3.156 \times 10^7\text{ s/year}} \approx 11.64\text{ 年}
+\end{equation}
+したがって、光が到着してから約11.6年遅れて宇宙線が地球に到着することになる。
+
+\end{document}

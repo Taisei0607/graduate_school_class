@@ -1,0 +1,54 @@
+\documentclass[autodetect-engine,11pt,a4paper]{bxjsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{bm}
+\geometry{margin=10mm}
+
+\title{\Large\textbf{宇宙の流体力学 レポート課題}}
+\author{BHB26052 河村太星}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+講義ノートp.77の記述のように、磁束密度の変動成分$\bm{B}_1$が速度変動$\bm{v}_1$と同様の波動方程式を満たすことを示す。
+
+非圧縮性磁気流体の線形化された方程式のうち、基礎方程式は以下の通りである。
+\begin{align}
+    \rho_{0}\frac{\partial \bm{v}_{1}}{\partial t} &= \frac{1}{\mu}(\bm{B}_{0}\cdot\nabla)\bm{B}_1 \label{eq:eom} \\
+    \frac{\partial \bm{B}_{1}}{\partial t} &= (\bm{B}_{0}\cdot\nabla)\bm{v}_{1} \label{eq:ind}
+\end{align}
+ここで、$\rho_0$は一様な密度、$\mu$は透磁率、$\bm{B}_0$は背景磁場、$\bm{v}_1$と$\bm{B}_1$はそれぞれ速度および磁束密度の微小変動を表す。
+基礎方程式(\ref{eq:ind})の両辺を時間$t$でさらに偏微分すると、以下の関係が得られる。
+\begin{equation}
+    \frac{\partial^{2}\bm{B}_{1}}{\partial t^{2}} = (\bm{B}_{0}\cdot\nabla)\left(\frac{\partial \bm{v}_{1}}{\partial t}\right)
+\end{equation}
+この右辺の$\frac{\partial \bm{v}_{1}}{\partial t}$に、運動方程式(\ref{eq:eom})を変形した式
+\begin{equation}
+    \frac{\partial \bm{v}_{1}}{\partial t} = \frac{1}{\rho_{0}\mu}(\bm{B}_{0}\cdot\nabla)\bm{B}_1
+\end{equation}
+を代入し、$\rho_0$および$\mu$が空間的に一様な定数であることに注意すると、次式が得られる。
+\begin{equation}
+    \frac{\partial^{2}\bm{B}_{1}}{\partial t^{2}} = \frac{1}{\rho_{0}\mu}(\bm{B}_{0}\cdot\nabla)^{2} \bm{B}_1
+\end{equation}
+ここで、講義ノートと同様に、背景磁場が$z$軸方向に一様であるとして$\bm{B}_{0} = (0, 0, B_{0})$と仮定すると、空間微分演算子は次のように書き換えられる。
+\begin{equation}
+    \bm{B}_{0}\cdot\nabla = B_{0}\frac{\partial}{\partial z}
+\end{equation}
+これを代入すると、
+\begin{align}
+    \frac{\partial^{2}\bm{B}_{1}}{\partial t^{2}} &= \frac{1}{\rho_{0}\mu}\left( B_{0}\frac{\partial}{\partial z} \right)\left( B_{0}\frac{\partial}{\partial z} \right) \bm{B}_1 \\
+    &= \frac{B_{0}^{2}}{\rho_{0}\mu}\frac{\partial^{2}\bm{B}_{1}}{\partial z^{2}}
+\end{align}
+両辺を移行して整理すると、最終的に以下の波動方程式を得る。
+\begin{equation}
+    \frac{\partial^{2}\bm{B}_{1}}{\partial t^{2}} - \frac{B_{0}^{2}}{\mu\rho_{0}}\frac{\partial^{2}\bm{B}_{1}}{\partial z^{2}} = 0 \label{eq:wave}
+\end{equation}
+式(\ref{eq:wave})は、速度変動$\bm{v}_1$が満たす講義ノートの(6.100)式
+\begin{equation}
+    \frac{\partial^{2}\bm{v}_{1}}{\partial t^{2}} - \frac{B_{0}^{2}}{\mu\rho_{0}}\frac{\partial^{2}\bm{v}_{1}}{\partial z^{2}} = 0
+\end{equation}
+と同じ形をしている。したがって、磁束密度の変動$\bm{B}_1$も$\bm{v}_1$と同様に、アルフベン速度$V_A = \sqrt{\frac{B_0^2}{\mu\rho_0}}$で伝播する波動方程式を満たすことが示された。
+
+\end{document}
